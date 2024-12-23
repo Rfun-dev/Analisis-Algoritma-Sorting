@@ -55,7 +55,7 @@ def insertion_sort_recursive(arr, n=None):
     arr[j + 1] = last
     return arr
 
-# Median Function
+# Median Functionpy 
 def calculate_median(arr):
     arr_sorted = sorted(arr)
     n = len(arr_sorted)
@@ -96,7 +96,7 @@ if st.button("Run Simulation"):
           start = time.time()
           sorted_data = insertion_sort(data.copy())
           elapsed = (time.time() - start) + elapsed
-          insertion_times.append(time.time())
+          insertion_times.append(elapsed)
           times[f"Insertion Sort"] = elapsed
           medians[f"Insertion Sort"] = calculate_median(sorted_data)
 
@@ -104,7 +104,7 @@ if st.button("Run Simulation"):
           start = time.time()
           sorted_data = insertion_sort_recursive(data.copy())
           elapsed = (time.time() - start) + elapsed
-          insertion_times_recursive.append(time.time())
+          insertion_times_recursive.append(elapsed)
           times[f"Insertion Sort Recursive"] = elapsed
           medians[f"Insertion Sort Recursive"] = calculate_median(sorted_data)
 
@@ -112,7 +112,7 @@ if st.button("Run Simulation"):
           start = time.time()
           sorted_data = insertion_sort(data.copy())
           elapsed = (time.time() - start) + elapsed
-          selection_times.append(time.time())
+          selection_times.append(elapsed)
           times[f"Selection Sort"] = elapsed
           medians[f"Selection Sort"] = calculate_median(sorted_data)
 
@@ -120,7 +120,7 @@ if st.button("Run Simulation"):
           start = time.time()
           sorted_data = selection_sort_recursive(data.copy())
           elapsed = (time.time() - start) + elapsed
-          selection_times_recursive.append(time.time())
+          selection_times_recursive.append(elapsed)
           times[f"Selection Sort Recursive"] = elapsed
           medians[f"Selection Sort Recursive"] = calculate_median(sorted_data)
 
